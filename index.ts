@@ -9,7 +9,7 @@ const main = async () => {
   collections.subscribe(console.log);
 
   app.get("/push", (_, res: Response) => {
-    subject.next({ name: "1", age: Math.floor(Math.random() * 99 + 1) });
+    subject.next({ name: `user-${Math.floor(Math.random() * 99 + 1)}`, age: Math.floor(Math.random() * 99 + 1) });
     res.json({ status: "ok" });
   });
 
